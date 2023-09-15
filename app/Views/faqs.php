@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>FAQs</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="h1">Contact us</h1>
+                    <h1 class="h1">FAQs</h1>
                 </div>
             </div>
         </div>
@@ -46,28 +46,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-              <h3 class="h3">Hello <?= $name ?>!</h3>
-<p>Silahkan hubungi kami melalui form berikut</p>
-            
-            <form action="" class="form">
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Message</label>
-                <textarea name="message" class="form-control" id="" cols="30" rows="10"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Kirim" class="btn btn-primary w-100">
-            </div>
-
-            </form>
-
+            <div class="col-md-12">
+              <?php foreach ($data_faqs as $faq) : ?>
+                    <h2 class="h2"><?= $faq['question'] ?></h2>
+                    <p><?= $faq['answer'] ?></p>
+                <?php endforeach; ?>
+                <h2 class="h2">Apa itu CI Neews?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi unde cumque! Cum repellendus eveniet, illum id doloribus, quibusdam tenetur debitis est libero quasi assumenda voluptates aliquam tempore. Porro, asperiores.</p>
+                <h2 class="h2">Bagaimana Cara Membuat Akun CI News?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi unde cumque! Cum repellendus eveniet, illum id doloribus, quibusdam tenetur debitis est libero quasi assumenda voluptates aliquam tempore. Porro, asperiores.</p>
+                <h2 class="h2">Bagaimana Cara Menulis Artikel di CI News?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi unde cumque! Cum repellendus eveniet, illum id doloribus, quibusdam tenetur debitis est libero quasi assumenda voluptates aliquam tempore. Porro, asperiores.</p>
+                <h2 class="h2">Apakah CI News Official?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi unde cumque! Cum repellendus eveniet, illum id doloribus, quibusdam tenetur debitis est libero quasi assumenda voluptates aliquam tempore. Porro, asperiores.</p>
             </div>
         </div>
     </div>
@@ -76,10 +67,9 @@
 		<div class="container text-center">Copyright &copy <?= Date('Y') ?> CI News</div>
 	</footer>
 
-    	<!-- Jquery dan Bootsrap JS -->
-	<script src="<?= base_url('js/jquery.min.js') ?>"></script>
-	<script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
-
+    <!-- Jquery dan Bootsrap JS -->
+    <script src="<?= base_url('js/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
 </body>
 
 </html>
